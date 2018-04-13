@@ -1,8 +1,8 @@
-Rails Contracts API
+H1 Rails Contracts API
 This project was made to create simple api endpoints for a simple contract management api app. The project is a sample org that can create users, and manage contracts for each user.  
 
 
-Installation
+Alt-H3 Installation
 Make sure you have ruby version 2.3.1 installed on your system.
 
 Clone the repository:
