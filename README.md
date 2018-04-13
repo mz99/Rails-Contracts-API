@@ -7,15 +7,15 @@ Make sure you have ruby version 2.3.1 installed on your system.
 
 Clone the repository:
 
-git clone https://github.com/mz99/Rails-Contracts-API
+    git clone https://github.com/mz99/Rails-Contracts-API
 Install dependencies
 
 cd Rails-Contracts-API
-bundle install
+    bundle install
 Run database migrations
 
-bin/rake db:create
-bin/rake db:migrate
+    bin/rake db:create
+    bin/rake db:migrate
 
 Test
 The tests are created with RSpec, grouped into:
@@ -34,24 +34,17 @@ Usage
 Start the app with:
 bin/rails server
 
-Built With
-Ruby on Rails - The web framework used
-Maven - Dependency Management
-ROME - Used to generate RSS Feeds
-Contributing
-Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
+API Endpoints
+POST   /api/v1/auth                                  Create JWT token
+POST   /api/v1/users/:user_id/contracts              Creates new contract for associated user
+GET    /api/v1/users/:user_id/contracts/:id          Shows specified contract for associated user
+DELETE /api/v1/users/:user_id/contracts/:id          Deletes the specified contract for associated user
+POST   /api/v1/users                                 Creates a user
 
-Versioning
-We use SemVer for versioning. For the versions available, see the tags on this repository.
+User
+Create a user by sending a post request with parameters email:, password to endpoint:
+/api/v1/users
 
-Authors
-Billie Thompson - Initial work - PurpleBooth
-See also the list of contributors who participated in this project.
-
-License
-This project is licensed under the MIT License - see the LICENSE.md file for details
-
-Acknowledgments
-Hat tip to anyone who's code was used
-Inspiration
-etc
+Authentication
+Once a user has been created, attain a JWT token by sending a post request to :
+/api/v1/auth
