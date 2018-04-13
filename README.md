@@ -37,6 +37,7 @@ Or selectively:
 
 ### Usage
 Start the app with:
+
     bin/rails server
 
 ### API Endpoints
