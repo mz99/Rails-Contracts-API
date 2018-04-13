@@ -1,4 +1,6 @@
 class ContractsController < ApplicationController
+  before_action :authenticate_user
+  
   def show
     if @current_user.contracts.find_by(id: params[:id])
       render json: @current_user.contracts.find_by(id: params[:id])
