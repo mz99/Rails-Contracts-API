@@ -26,9 +26,11 @@ The tests are created with RSpec, grouped into:
 2. Request specs
 
 You can run all of the tests with in your Rails-Contracts-API folder:
+
     bin/rspec
 
 Or selectively:
+
     bin/rspec spec/models
     bin/rspec spec/requests
 
