@@ -8,10 +8,13 @@ Make sure you have ruby version 2.3.1 installed on your system.
 Clone the repository:
 
     git clone https://github.com/mz99/Rails-Contracts-API
+
 Install dependencies
 
 cd Rails-Contracts-API
+
     bundle install
+
 Run database migrations
 
     bin/rake db:create
@@ -43,18 +46,21 @@ Start the app with:
 
 ### User
 Create a user by sending a post request with parameters to:
+
     POST /api/v1/users  
     email = 'test@test.com'
     password = '123456'
 
 ### Authentication
 Once a user has been created, attain a JWT token by sending a post request to :
+
     POST /api/v1/auth
     email = 'test@test.com'
     password = '123456'
 
 ### Contract management
 Once a JWT is given, place the JWT token in the request headers and then send a post request to:
+
     POST   /api/v1/users/:user_id/contracts
     contract[:vendor] = 'Lebara'
     contract[:starts_on] = '20/12/2018'     'DD/MM/YYYY' format
