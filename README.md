@@ -19,20 +19,20 @@ Run database migrations
 
 ### Test
 The tests are created with RSpec, grouped into:
-Model specs
-Request specs
+1. Model specs
+2. Request specs
 
 You can run all of the tests with in your Rails-Contracts-API folder:
-bin/rspec
+    bin/rspec
 
 Or selectively:
-bin/rspec spec/models
-bin/rspec spec/requests
+    bin/rspec spec/models
+    bin/rspec spec/requests
 
 
 ### Usage
 Start the app with:
-bin/rails server
+    bin/rails server
 
 ### API Endpoints
     POST   /api/v1/auth                                  Create JWT token
@@ -42,9 +42,21 @@ bin/rails server
     POST   /api/v1/users                                 Creates a user
 
 ### User
-Create a user by sending a post request with parameters email:, password to endpoint:
-/api/v1/users
+Create a user by sending a post request with parameters to:
+    POST /api/v1/users  
+    email = 'test@test.com'
+    password = '123456'
 
 ### Authentication
 Once a user has been created, attain a JWT token by sending a post request to :
-/api/v1/auth
+    POST /api/v1/auth
+    email = 'test@test.com'
+    password = '123456'
+
+### Contract management
+Once a JWT is given, place the JWT token in the request headers and then send a post request to:
+    POST   /api/v1/users/:user_id/contracts
+    contract[:vendor] = 'Lebara'
+    contract[:starts_on] = '20/12/2018'     'DD/MM/YYYY' format
+    contract[:ends_on] = '20/06/2019'       'DD/MM/YYYY' format
+    contract[:price] = '35'
