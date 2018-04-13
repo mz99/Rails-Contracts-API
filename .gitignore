@@ -17,4 +17,5 @@
 !/log/.keep
 !/tmp/.keep
 
+coverage/*
 .byebug_history
