@@ -1,5 +1,5 @@
 # Rails Contracts API
-This project was made to create simple api endpoints for a simple contract management api app. The project is a sample org that can create users, and manage contracts for each user.  
+This project was made to create api endpoints for a simple contract management api app. The project is a sample org that can create users, and manage contracts for each user.  
 
 
 ### Installation
