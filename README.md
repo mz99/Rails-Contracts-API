@@ -1,7 +1,7 @@
 # Rails Contracts API
 This project was made to create api endpoints for a simple contract management api app. The project is a sample org that can create users, and manage contracts for each user.  
 
-![alt text](https://github.com/mz99/Rails-Contracts-API/blob/master/erd.jpg "ERD")
+![alt text](https://github.com/mz99/Rails-Contracts-API/blob/master/erd-1.jpg "ERD")
 
 
 ### Installation
